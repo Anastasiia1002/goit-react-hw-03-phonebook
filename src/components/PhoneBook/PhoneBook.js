@@ -81,7 +81,7 @@ class PhoneBook extends React.Component {
         <h2>Contacts</h2>
         <Filter filter={filter} handleFilterChange={this.handleFilterChange} />
         <ContactList
-          filterContacts={this.filterContacts}
+          filtedContacts={this.filterContacts()}
           delContact={this.delContact}
         />
       </div>

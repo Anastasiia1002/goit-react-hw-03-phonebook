@@ -28,11 +28,11 @@ const Li = styled.ul`
   justify-content: space-between;
   padding-left: 30px;
 `;
-const ContactList = ({ filterContacts, delContact }) => {
+const ContactList = ({ filtedContacts, delContact }) => {
   return (
     <>
       <Ul>
-        {filterContacts().map(({ id, name, number }) => {
+        {filtedContacts.map(({ id, name, number }) => {
           return (
             <Li key={id}>
               <span>{name}: </span>
@@ -49,7 +49,7 @@ const ContactList = ({ filterContacts, delContact }) => {
   );
 };
 ContactList.propTypes = {
-  filterContacts: PropTypes.func.isRequired,
+  filtedContacts: PropTypes.array.isRequired,
   delContact: PropTypes.func.isRequired,
 };
 
